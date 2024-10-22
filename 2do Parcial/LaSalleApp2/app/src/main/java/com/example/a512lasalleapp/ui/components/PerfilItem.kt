@@ -63,6 +63,7 @@ fun PerfilItem(student: Student) {
                 AsyncImage(
                     model = ImageRequest.Builder(LocalContext.current)
                         .placeholder(R.drawable.student_1)
+                        .data(student.photo)
                         .build(),
                     contentDescription = "ProfileImage",
                     modifier = Modifier
@@ -126,7 +127,7 @@ fun PerfilItemPreview() {
         institutionalEmail = "jom77268@lasallebajio.edu.mx",
         career = "ISSC",
         photo = "https://em-content.zobj.net/source/apple/237/ghost_1f47b.png",
-        currentSemester = "4",
+        currentSemester = "1",
         subjects = listOf(
             Subject(id = 1, subjectName = "PROGRAMACIÓN PARA PLATAFORMA OS X", partialGrades = listOf(8.1f, 10.0f, 7.0f)),
             Subject(id = 2, subjectName = "DESARROLLO INTEGRAL PARA APLICACIONES EMPRESARIALES", partialGrades = listOf(7.8f, 6.7f, 8.0f)),

@@ -32,7 +32,6 @@ import com.example.a512lasalleapp.ui.theme.LaSalleAppTheme
 
 @Composable
 fun GradesScreen(navController: NavController, innerPadding: PaddingValues, student: Student) {
-    // Calcular el promedio total del semestre
     val averageSemesterGrade = student.subjects.map { it.partialGrades.average() }.average()
     val scrollState = rememberScrollState()
 
@@ -58,6 +57,7 @@ fun GradesScreen(navController: NavController, innerPadding: PaddingValues, stud
             AsyncImage(
                 model = ImageRequest.Builder(LocalContext.current)
                     .placeholder(R.drawable.student_1)
+                    .data(student.photo)
                     .build(),
                 contentDescription = "ProfileImage",
                 modifier = Modifier
