@@ -129,19 +129,7 @@ fun HomeScreen(
                     contentDescription = "LogOut",
                     modifier = Modifier
                         .size(45.dp)
-                        .clickable {
-                            Log.i("HomeScreen", "Cerrando Sesion")
-
-                            if (sharedPreferences != null) {
-                                with(sharedPreferences.edit()) {
-                                    putBoolean("isLogged", false)
-                                    apply()
-                                }
-                            }
-                            navController.navigate("login") {
-                                popUpTo("home") { inclusive = true }
-                            }
-                        },
+                        .clickable { },
                     tint = Color.White
                 )
             }
